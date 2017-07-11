@@ -74,3 +74,5 @@ const MenuBar = () => {
 export default MenuBar
 
 ```
+
+The accordian menu is the only available component currently, but more support for various components will be provided. Contributions will be welcomed!
