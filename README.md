@@ -11,7 +11,7 @@ npm install --save redux-router-menu
 Let's take a look at a simple example.
 
 
-1. Menu reducer
+Menu reducer
 ```javascript
 import { combineReducers } from 'redux'
 import { menuReducer } from 'redux-router-menu'
@@ -23,7 +23,7 @@ const rootReducer = combineReducers({
 
 ```
 
-2. Your menu component
+Your menu component
 ```js
 import React from 'react'
 import { Accordion } from 'redux-router-menu'
