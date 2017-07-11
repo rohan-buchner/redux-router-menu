@@ -5,6 +5,9 @@
 ```
 npm install --save redux-router-menu
 ```
+## Demo
+
+http://3794.github.io/redux-router-menu/
 
 ## Guide
 
