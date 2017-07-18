@@ -10,12 +10,13 @@ import MainMenu from './MainMenu'
 // }
 
 // todo 컴포넌트 이름 다른거 뭐 없을까?
-const Accordion = ({ openedMenus, menuId, title, children }) => {
+const Accordion = ({ openedMenus, activeMainMenu, menuId, title, children }) => {
   const isOpen = openedMenus.indexOf(menuId) > -1
+  const isActive = activeMainMenu === menuId
 
   return (
     <div>
-      {title({ MainMenu })}
+      {title({ MainMenu, isOpen, isActive })}
       <VerticalSpring
         duration={300}
         height={isOpen ? 'auto' : 0}>
@@ -25,4 +26,10 @@ const Accordion = ({ openedMenus, menuId, title, children }) => {
   )
 }
 
-export default connect(state => ({ openedMenus: state.menu.openedMenus }))(Accordion)
+export default connect(({ menu }) => {
+  const { openedMenus, activeMainMenu } =  menu
+  return {
+    openedMenus,
+    activeMainMenu
+  }
+})(Accordion)
