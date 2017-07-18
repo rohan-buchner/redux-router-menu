@@ -15,7 +15,7 @@ const Accordion = ({ openedMenus, menuId, title, children }) => {
 
   return (
     <div>
-      {title(MainMenu)}
+      {title({ MainMenu })}
       <VerticalSpring
         duration={300}
         height={isOpen ? 'auto' : 0}>
